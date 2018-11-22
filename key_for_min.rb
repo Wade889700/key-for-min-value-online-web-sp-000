@@ -10,7 +10,7 @@ def key_for_min_value(name_hash)
       return name[2]
     elsif (value[0] > value[2] && value[2] > value[1]) || (value[2] > value[0] && value[0] > value[1])
       return name[1]
-    else 
+    else
         return name[0]
     end
   end
