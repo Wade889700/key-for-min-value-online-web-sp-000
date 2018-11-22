@@ -5,13 +5,13 @@ def key_for_min_value(name_hash)
   if name_hash ={}
     return nil
   end
-  name_hash.collect do |name, value|
-    if (value[0] > value[1] && value[1]>value[2]) || (value[1] > value[0] && value[0] > value[2])
-      return name[2]
-    elsif (value[0] > value[2] && value[2] > value[1]) || (value[2] > value[0] && value[0] > value[1])
-      return name[1]
-    else
-        return name[0]
+  lowest_value = 0
+  lowest_key = nil
+  name_hash.each do |name, value|
+    if lowest==nil || value<lowest_value
+      lowest_value = value
+      lowest_key = key
     end
   end
+  return key
 end
